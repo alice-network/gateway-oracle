@@ -59,3 +59,10 @@ dexChain.gateway.subscribeForWithdrawalSubmittedEvent(event => {
     );
     dexChain.gateway.signPendingWithdrawal(withdrawalNonce, signature);
 });
+
+console.log("======================== Ethereum ========================");
+console.log("  Oracle:\t" + ethereum.web3.eth.defaultAccount);
+console.log("  Gateway:\t" + ethereum.gateway.address);
+console.log("======================== DexChain ========================");
+console.log("  Oracle:\t" + dexChain.web3.eth.defaultAccount);
+console.log("  Gateway:\t" + dexChain.gateway.address);

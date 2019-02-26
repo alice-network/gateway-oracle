@@ -8,6 +8,7 @@ class Gateway {
         this.web3 = web3;
         const { proxies } = require(`@alice-network/gateway-dex-chain/zos.${networkName}`);
         const { address } = proxies["gateway-dex-chain/Gateway"][0];
+        this.address = address;
         this.gateway = new web3.eth.Contract(abi, address, {
             from: web3.eth.defaultAccount,
             ...options
